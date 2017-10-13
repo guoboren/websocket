@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- User -->
+    <package name="user" namespace="/user" extends="struts-default,json-default">
+		<action name="login" class="websocket.action.UserAction" method="login">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="regist" class="websocket.action.UserAction" method="regist">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="logout" class="websocket.action.UserAction" method="logout">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="checkLogin" class="websocket.action.UserAction" method="checkLogin">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="clearLogin" class="websocket.action.UserAction" method="clearLogin">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+	<!-- Admin -->
+	<package name="admin" namespace="/admin" extends="struts-default,json-default">
+		<action name="manageOnlineUsers" class="websocket.action.AdminAction" method="manageOnlineUsers">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="forceOutlineUser" class="websocket.action.AdminAction" method="forceOutlineUser">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+</struts>
